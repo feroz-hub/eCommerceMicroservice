@@ -1,0 +1,6 @@
+services:
+  applicationuserdb:
+   image: postgres
+
+volumes:
+  postgres_applicationuser:
