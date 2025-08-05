@@ -2,12 +2,11 @@ services:
   applicationuserdb:
     container_name: applicationuserdb
     environment:
-      -POSTGRES_USER: postgres
-      -POSTGRES_PASSWORD: postgres
-      -POSTGRES_DB: ApplicationuserDb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ApplicationUserDb
     restart: always
     ports:
-        - "5432:5432"
+      - "5432:5432"
     volumes:
       - postgres_applicationuser:/var/lib/postgresql/data
-  

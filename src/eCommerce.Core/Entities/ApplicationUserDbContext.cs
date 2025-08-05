@@ -1,8 +1,15 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace eCommerce.Core.Entities;
 
-public class ApplicationUserDbContext(DbContextOptions<ApplicationUserDbContext> options) : DbContext(options)
+public class ApplicationUserDbContext(DbContextOptions<ApplicationUserDbContext> options) : IdentityDbContext(options)
 {
-    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+    /// <summary>
+    /// Gets or sets the DbSet for ApplicationUser entities.
+    /// </summary>
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
+    
+ 
+    
 }
